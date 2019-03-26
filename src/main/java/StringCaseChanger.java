@@ -1,5 +1,6 @@
 public class StringCaseChanger implements StringTransformer{
     private StringDrink drink;
+    private boolean executed;
 
     StringCaseChanger(StringDrink drink){
 
@@ -17,5 +18,12 @@ public class StringCaseChanger implements StringTransformer{
                 buffer.append(Character.toLowerCase(c));
         }
         this.drink.setText(buffer.toString());
+        this.executed = true;
+    }
+
+    @Override
+    public void undo() {
+        if(this.executed)
+            this.execute();
     }
 }

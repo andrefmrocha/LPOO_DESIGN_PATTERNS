@@ -12,4 +12,10 @@ public class StringTransformerGroup implements StringTransformer{
         for(StringTransformer transformer: this.transformers)
             transformer.execute();
     }
+
+    @Override
+    public void undo() {
+        for(StringTransformer transformer: this.transformers)
+            transformer.undo();
+    }
 }
