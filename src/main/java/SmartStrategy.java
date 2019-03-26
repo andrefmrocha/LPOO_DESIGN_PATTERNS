@@ -13,12 +13,12 @@ public class SmartStrategy implements OrderingStrategy{
     }
 
     @Override
-    public void happyHourStarted(Bar bar) {
+    public void happyHourStarted(StringBar bar) {
         this.mixDrinks();
     }
 
     @Override
-    public void happyHourEnded(Bar bar) {
+    public void happyHourEnded(StringBar bar) {
     }
 
     private void mixDrinks(){

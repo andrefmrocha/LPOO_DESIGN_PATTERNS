@@ -51,4 +51,5 @@ public class BarTest {
         Mockito.verify(clientMock, Mockito.never()).happyHourEnded(bar);
     }
 
+
 }
